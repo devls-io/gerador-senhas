@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+body{
+    font-family: "Fira Code", monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+    background-color: #f0f4f8;
+    
+    background-image: radial-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 2px);
+    background-size: 10px 10px;
+
+}
+
+h1{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), 0 0 25px rgba(91, 168, 193, 0.7); 
+
+    font-size: 3em;
+    text-decoration: underline;
+    
+}
+
+.container{
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 700px;
+
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.589),
+    5px 10px 15px rgba(91, 168, 193, 0.651); /* Sombras com azul suave */
+}
+
+#copy-pass{
+    display: none;
+    margin: auto;
+}
+
+form > input, button{
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+input[type="number"]{
+    width: 150px;
+    text-align: center;
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid #5BA8C1; 
+    border-radius: 6px; 
+    background-color: #f8f9fa;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);  
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="number"]:focus {
+    border-color: #4A8FA6; 
+    background-color: #ffffff; 
+    box-shadow: 2px 2px 8px rgba(91, 168, 193, 0.5);
+    outline: none; 
+}
+
+label {
+    font-size: 18px;
+    font-weight: 500; 
+    color: #4A8FA6; 
+    margin-bottom: 5px;
+    
+}
+
+#password-display{
+    font-size: 20px;
+    font-weight: bold;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    color: #333; 
+    padding: 10px;
+    background-color: #f4f7f9; 
+    border-radius: 6px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 100%; 
+   
+}
+
+button{
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    color: white;
+    background-color: #5BA8C1;
+    font-weight: bolder;
+
+}
+
+button:hover{
+    background-color: #5197B0;
+}
+
+
+/* Estilo do Modal */
+.modal {
+    display: none; /* Inicialmente invisível */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Fica sobre outros conteúdos */
+
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.3s ease; /* Transição de opacidade */
+    
+
+  }
+
+/* Quando o modal estiver visível */
+.modal.show {
+    display: flex; /* Exibe o modal */
+    opacity: 1; /* Deixa ele visível com animação */
+}
+
+
+
+  
+/* Conteúdo do Modal */
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
+    animation: fadeIn 0.3s ease; /* Animação do conteúdo */
+  }
+  
+/* Botão de Fechar */
+  #modal-close {
+    background-color: #4c98af;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-top: 20px;
+  }
+  
+  #modal-close:hover {
+    background-color: #274b57;
+  }
+
+
+
+
+/* Definindo a animação de fade-in para o conteúdo */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9); /* Começa com o conteúdo um pouco menor */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* Termina no tamanho normal */
+    }
+}
+  
+
+  @media (max-width: 768px) {
+    .container{
+        width: 80vw;
+    }
+
+    h1{
+        font-size: 2em;
+    }
+
+    input, button {
+        width: 75%;
+    }
+    
+  
+}

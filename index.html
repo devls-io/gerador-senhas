@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Senhas</h1>
+
+        <form id="formGenerate">
+            <label for="pass-length">Tamanho da Senha:</label>
+            <input type="number" name="length" id="pass-length" placeholder="Ex: 10" min="1" max="50">
+
+            <button type="submit" aria-label="Clique para gerar uma senha aleatória">Gerar Senha</button>
+        </form>
+
+        <p id="password-display"></p>
+
+        <button id="copy-pass" aria-label="Copiar senha gerada">Copiar Senha</button>
+
+    </div>
+
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <p id="modal-message">Senha gerada com sucesso!</p>
+            <button id="modal-close">Fechar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>
