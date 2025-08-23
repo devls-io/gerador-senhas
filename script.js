@@ -4,8 +4,8 @@ class PasswordGenerator{
     }
 
     generate(length){
-        if(!length || isNaN(length) || length < 1 || length > 50){
-            throw new Error("Por favor, insira um número válido para o tamanho da senha. O tamanho deve ser entre 1 e 50.");
+        if(!length || isNaN(length) || length < 8 || length > 50){
+            throw new Error("Por favor, insira um número válido para o tamanho da senha. O tamanho deve ser entre 8 e 50 caracteres.");
 
         }
 
